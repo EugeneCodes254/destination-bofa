@@ -22,6 +22,36 @@ const previewImages = [
   },
 ];
 
+const experienceVideos = [
+  {
+    src: "/bofa/property.mp4",
+    label: "Property Tour",
+    title: "The full beachfront layout",
+    description:
+      "A guided look at the twin villas, private pools, garden spaces, beachfront setting, and how the property comes together.",
+    ariaLabel: "Open property tour video",
+    featured: true,
+  },
+  {
+    src: "/bofa/Villa-Amani.mp4",
+    label: "Villa Amani",
+    title: "Warm interiors and private coastal comfort",
+    description:
+      "Preview Villa Amani’s interior character, living spaces, bedrooms, and the details that make it distinct.",
+    ariaLabel: "Open Villa Amani video",
+    featured: false,
+  },
+  {
+    src: "/bofa/Villa-Raha.mp4",
+    label: "Villa Raha",
+    title: "A distinct villa setting with its own interior feel",
+    description:
+      "Preview Villa Raha’s interior atmosphere so guests can choose the villa that best suits their stay.",
+    ariaLabel: "Open Villa Raha video",
+    featured: false,
+  },
+];
+
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +61,10 @@ export default function Home() {
     title: string;
     alt: string;
   }>(null);
-  const [videoOpen, setVideoOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<null | {
+    src: string;
+    title: string;
+  }>(null);
 
   useEffect(() => {
     const syncHeader = () => setIsScrolled(window.scrollY > 24);
@@ -45,11 +78,11 @@ export default function Home() {
   useEffect(() => {
     document.body.classList.toggle(
       "nav-open",
-      menuOpen || videoOpen || Boolean(activeImage)
+      menuOpen || Boolean(activeVideo) || Boolean(activeImage)
     );
 
     return () => document.body.classList.remove("nav-open");
-  }, [menuOpen, videoOpen, activeImage]);
+  }, [menuOpen, activeVideo, activeImage]);
 
   function closeMenu() {
     setMenuOpen(false);
@@ -262,61 +295,47 @@ export default function Home() {
             </div>
 
             <p>
-              Move between quiet swims, fresh seafood lunches, beach walks,
-              creek excursions, and late dinners under warm coastal air.
+              Explore the full beachfront property, then preview each villa
+              separately so guests can choose the layout and interior style that
+              best suits their stay.
             </p>
           </div>
 
           <div className="experience-grid">
-            <article className="experience-card video-card large">
-              <button
-                className="video-open-card"
-                type="button"
-                aria-label="Open villa interior video"
-                onClick={() => setVideoOpen(true)}
+            {experienceVideos.map((video) => (
+              <article
+                className={`experience-card video-card ${
+                  video.featured ? "large" : ""
+                }`}
+                key={video.src}
               >
-                <video
-                  src="/bofa/gallery/1.mp4"
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
-                <div className="video-card-overlay">
-                  <span>Interior</span>
-                  <h3>Fully Furnished</h3>
-                  <p>
-                    A ready coastal home with furnished living spaces, kitchen
-                    facilities, linen, and towels.
-                  </p>
-                  <strong>Play Video</strong>
-                </div>
-              </button>
-            </article>
-
-            <article className="experience-card">
-              <img src="/bofa/gallery/villa-04.jpg" alt="Private villa pool" />
-              <div>
-                <span>Relax</span>
-                <h3>Private Pool</h3>
-                <p>
-                  Sun loungers, shaded corners, and a cool-water pause whenever
-                  the coast gets golden.
-                </p>
-              </div>
-            </article>
-
-            <article className="experience-card">
-              <img src="/bofa/gallery/villa-05.jpeg" alt="Kilifi coast" />
-              <div>
-                <span>Explore</span>
-                <h3>Kilifi Creek</h3>
-                <p>
-                  Dhow cruises, watersports, fishing, and soft evening views
-                  close to the villa.
-                </p>
-              </div>
-            </article>
+                <button
+                  className="video-open-card"
+                  type="button"
+                  aria-label={video.ariaLabel}
+                  onClick={() =>
+                    setActiveVideo({
+                      src: video.src,
+                      title: video.title,
+                    })
+                  }
+                >
+                  <video
+                    src={video.src}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                  <div className="video-card-overlay">
+                    <span>{video.label}</span>
+                    <h3>{video.title}</h3>
+                    <p>{video.description}</p>
+                    <strong>Play Video</strong>
+                  </div>
+                </button>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -644,26 +663,26 @@ export default function Home() {
         </div>
       )}
 
-      {videoOpen && (
+      {activeVideo && (
         <div className="video-modal" role="dialog" aria-modal="true">
           <button
             className="video-modal-backdrop"
             type="button"
             aria-label="Close video"
-            onClick={() => setVideoOpen(false)}
+            onClick={() => setActiveVideo(null)}
           ></button>
 
           <div className="video-modal-card">
             <button
               className="video-modal-close"
               type="button"
-              onClick={() => setVideoOpen(false)}
+              onClick={() => setActiveVideo(null)}
             >
               Close
             </button>
 
             <video
-              src="/bofa/gallery/1.mp4"
+              src={activeVideo.src}
               controls
               autoPlay
               playsInline
