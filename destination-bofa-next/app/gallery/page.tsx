@@ -7,62 +7,62 @@ const galleryImages = [
   {
     src: "/bofa/gallery/villa-01.jpeg",
     title: "Villa Balcony",
-    alt: "The Destination at Bofa villa interior",
+    alt: "The Destination@Bofa villa interior",
   },
   {
     src: "/bofa/gallery/villa-02.png",
     title: "Pool Area",
-    alt: "The Destination at Bofa private pool",
+    alt: "The Destination@Bofa private pool",
   },
   {
     src: "/bofa/gallery/villa-03.png",
     title: "Pergola",
-    alt: "The Destination at Bofa coastal lounge",
+    alt: "The Destination@Bofa coastal lounge",
   },
   {
     src: "/bofa/gallery/villa-04.jpg",
     title: "Pool View",
-    alt: "The Destination at Bofa pool view",
+    alt: "The Destination@Bofa pool view",
   },
   {
     src: "/bofa/gallery/villa-05.jpeg",
     title: "Sunsets",
-    alt: "The Destination at Bofa sunset coast view",
+    alt: "The Destination@Bofa sunset coast view",
   },
   {
     src: "/bofa/gallery/villa-06.jpeg",
     title: "Serenity",
-    alt: "The Destination at Bofa garden and coastal villa",
+    alt: "The Destination@Bofa garden and coastal villa",
   },
   {
     src: "/bofa/gallery/villa-07.jpg",
     title: "Twin Villas",
-    alt: "The Destination at Bofa beachfront villa",
+    alt: "The Destination@Bofa beachfront villa",
   },
   {
     src: "/bofa/gallery/villa-08.jpg",
     title: "Kitchen/Dining",
-    alt: "The Destination at Bofa villa kitchen",
+    alt: "The Destination@Bofa villa kitchen",
   },
   {
     src: "/bofa/gallery/villa-09.jpg",
     title: "Spacious Kitchen",
-    alt: "The Destination at Bofa bedroom interior",
+    alt: "The Destination@Bofa kitchen interior",
   },
   {
     src: "/bofa/gallery/villa-10.jpg",
     title: "Beach Views",
-    alt: "The Destination at Bofa beachfront seating",
+    alt: "The Destination@Bofa beachfront seating",
   },
   {
     src: "/bofa/gallery/villa-11.jpg",
     title: "Comfy Rooms",
-    alt: "The Destination at Bofa bedroom",
+    alt: "The Destination@Bofa bedroom",
   },
   {
     src: "/bofa/gallery/villa-12.jpg",
     title: "Double Rooms",
-    alt: "The Destination at Bofa twin bedroom",
+    alt: "The Destination@Bofa twin bedroom",
   },
 ];
 
@@ -118,8 +118,8 @@ export default function GalleryPage() {
           menuOpen ? "menu-open" : ""
         }`}
       >
-        <Link className="brand" href="/" aria-label="The Destination at Bofa">
-          <img src="/bofa/logo.jpeg" alt="The Destination at Bofa logo" />
+        <Link className="brand" href="/" aria-label="The Destination@Bofa">
+          <img src="/bofa/logo.jpeg" alt="The Destination@Bofa logo" />
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -143,6 +143,7 @@ export default function GalleryPage() {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((current) => !current)}
         >
+          <span></span>
           <span></span>
           <span></span>
         </button>
@@ -182,7 +183,7 @@ export default function GalleryPage() {
 
           <div className="gallery-hero-content">
             <p className="hero-eyebrow">Gallery</p>
-            <h1>The Destination at Bofa in pictures.</h1>
+            <h1>The Destination@Bofa in pictures.</h1>
             <p>
               A visual look at the villas, pools, coastal spaces, beachfront
               views, and quiet Bofa atmosphere.
@@ -216,9 +217,9 @@ export default function GalleryPage() {
             <p className="eyebrow dark">Rates / Bookings</p>
             <h2>Your Bofa escape starts with a simple enquiry.</h2>
             <p>
-              Share your dates and group size. The team will confirm
-              availability, the seasonal rate, and any arrangements for meals,
-              occasions, or retreats.
+              Share your dates, villa preference, and group size. The team will
+              confirm availability, the seasonal rate, and any arrangements for
+              meals, occasions, or retreats.
             </p>
 
             <div className="contact-block">
@@ -228,8 +229,19 @@ export default function GalleryPage() {
               <a href="mailto:thedestinationbofa@gmail.com">
                 thedestinationbofa@gmail.com
               </a>
-              <a href="https://www.instagram.com/thedestinationkilifi/">
-                @thedestinationkilifi
+              <a
+                href="https://www.instagram.com/thedestinationkilifi/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                IG Handle: @thedestinationkilifi
+              </a>
+              <a
+                href="https://maps.app.goo.gl/uS7Xbq8jpewA6VT26"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Location: The Destination@Bofa, Kilifi
               </a>
             </div>
           </div>
@@ -246,16 +258,29 @@ export default function GalleryPage() {
               />
             </label>
 
-            <label>
-              Email
-              <input
-                type="email"
-                name="email"
-                autoComplete="email"
-                placeholder="you@example.com"
-                required
-              />
-            </label>
+            <div className="form-row">
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  autoComplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+
+              <label>
+                Phone Number
+                <input
+                  type="tel"
+                  name="phone"
+                  autoComplete="tel"
+                  placeholder="+254..."
+                  required
+                />
+              </label>
+            </div>
 
             <div className="form-row">
               <label>
@@ -269,22 +294,34 @@ export default function GalleryPage() {
             </div>
 
             <label>
-              Guests
-              <select name="guests" required>
-                <option value="">Select guests</option>
-                <option>2 guests</option>
-                <option>4 guests</option>
-                <option>6 guests</option>
-                <option>8 guests</option>
+              Villa Selection
+              <select name="villa" required>
+                <option value="">Select villa</option>
+                <option>Villa Amani</option>
+                <option>Villa Raha</option>
+                <option>Either villa</option>
+                <option>Both villas</option>
               </select>
             </label>
+
+            <div className="form-row">
+              <label>
+                Adults
+                <input type="number" name="adults" min="1" max="16" required />
+              </label>
+
+              <label>
+                Children
+                <input type="number" name="children" min="0" max="16" required />
+              </label>
+            </div>
 
             <label>
               Message
               <textarea
                 name="message"
                 rows={4}
-                placeholder="Share any arrival notes or questions."
+                placeholder="Share any arrival notes, meal requests, event needs, or questions."
               ></textarea>
             </label>
 
@@ -302,7 +339,7 @@ export default function GalleryPage() {
       <footer className="site-footer">
         <div>
           <Link className="brand footer-brand" href="/">
-            <img src="/bofa/logo.jpeg" alt="The Destination at Bofa logo" />
+            <img src="/bofa/logo.jpeg" alt="The Destination@Bofa logo" />
           </Link>
           <p>Twin Kilifi luxury beachfront villas near Bofa Beach.</p>
         </div>
@@ -316,7 +353,7 @@ export default function GalleryPage() {
           <Link href="/#booking">Bookings</Link>
         </nav>
 
-        <p className="copyright">© 2026 The Destination at Bofa</p>
+        <p className="copyright">© 2026 The Destination@Bofa</p>
       </footer>
 
       {activeImage && (

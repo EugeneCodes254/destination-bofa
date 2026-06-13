@@ -8,17 +8,17 @@ const previewImages = [
   {
     src: "/bofa/gallery/villa-01.jpeg",
     title: "Beachfront Villa",
-    alt: "Beachfront villa at The Destination Bofa",
+    alt: "Beachfront villa at The Destination@Bofa",
   },
   {
     src: "/bofa/gallery/villa-02.png",
     title: "Poolside Calm",
-    alt: "Private pool at The Destination Bofa",
+    alt: "Private pool at The Destination@Bofa",
   },
   {
     src: "/bofa/gallery/villa-03.png",
     title: "Coastal Living",
-    alt: "Luxury villa living area at The Destination Bofa",
+    alt: "Luxury villa living area at The Destination@Bofa",
   },
 ];
 
@@ -108,8 +108,8 @@ export default function Home() {
           menuOpen ? "menu-open" : ""
         }`}
       >
-        <Link className="brand" href="/" aria-label="The Destination at Bofa">
-          <img src="/bofa/logo.jpeg" alt="The Destination at Bofa logo" />
+        <Link className="brand" href="/" aria-label="The Destination@Bofa">
+          <img src="/bofa/logo.jpeg" alt="The Destination@Bofa logo" />
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -133,6 +133,7 @@ export default function Home() {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((current) => !current)}
         >
+          <span></span>
           <span></span>
           <span></span>
         </button>
@@ -171,7 +172,7 @@ export default function Home() {
           <div className="hero-overlay" aria-hidden="true"></div>
 
           <div className="hero-content">
-            <p className="hero-eyebrow">Kilifi luxury beach villas</p>
+            <p className="hero-eyebrow">Luxury Beach Villas Kilifi</p>
 
             <h1>
               The Destination
@@ -194,12 +195,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          <aside className="hero-panel">
-            <span>Twin beachfront villas</span>
-            <strong>Up to 8 guests</strong>
-            <span>Private pools · Chef · Daily housekeeping</span>
-          </aside>
         </section>
 
         <section className="intro section-pad screen-fit" id="villa">
@@ -212,8 +207,8 @@ export default function Home() {
 
             <div className="intro-copy">
               <p>
-                The Destination at Bofa is made for families, groups, retreats,
-                and slow celebrations that need space to breathe. Two identical
+                The Destination@Bofa is made for families, groups, retreats, and
+                slow celebrations that need space to breathe. Two identical
                 villas sit directly on a private beach, each with its own pool,
                 generous living spaces, and uninterrupted sea views.
               </p>
@@ -236,8 +231,8 @@ export default function Home() {
             onClick={() =>
               setActiveImage({
                 src: "/bofa/gallery/villa-06.jpeg",
-                title: "The Destination at Bofa",
-                alt: "The Destination at Bofa beachfront villa",
+                title: "The Destination@Bofa",
+                alt: "The Destination@Bofa beachfront villa",
               })
             }
           ></button>
@@ -290,7 +285,7 @@ export default function Home() {
         <section className="experience section-pad" id="experience">
           <div className="experience-heading">
             <div>
-              <p className="eyebrow dark">The Destination Bofa Experience</p>
+              <p className="eyebrow dark">The Destination@Bofa Experience</p>
               <h2>Designed for barefoot days and beautifully hosted nights.</h2>
             </div>
 
@@ -348,7 +343,8 @@ export default function Home() {
 
             <p>
               Your stay can be arranged as private and independent, or fully
-              supported with meals, transport, cleaning, and local experiences.
+              supported with meals, cleaning, backup power, fresh water supply,
+              and local experiences.
             </p>
           </div>
 
@@ -381,6 +377,24 @@ export default function Home() {
             </article>
 
             <article>
+              <span>Backup Power</span>
+              <h3>Generator support</h3>
+              <p>
+                A backup generator is available to support a smoother stay when
+                power interruptions occur.
+              </p>
+            </article>
+
+            <article>
+              <span>Fresh Water</span>
+              <h3>Non-seawater supply</h3>
+              <p>
+                The villas are supported with fresh water supply for guest
+                comfort throughout the stay.
+              </p>
+            </article>
+
+            <article>
               <span>Events and Retreats</span>
               <h3>Gather beautifully</h3>
               <p>
@@ -404,7 +418,7 @@ export default function Home() {
               setActiveImage({
                 src: "/bofa/gallery/villa-07.jpg",
                 title: "Villa Facilities",
-                alt: "Villa facilities at The Destination Bofa",
+                alt: "Villa facilities at The Destination@Bofa",
               })
             }
           ></button>
@@ -422,7 +436,8 @@ export default function Home() {
               </li>
               <li>Open lounge, dining space, and fully equipped kitchen.</li>
               <li>
-                Private pool, sun loungers, garden seating, and shaded terrace.
+                Private pool, sun loungers, garden seating, and furnished
+                poolside gazebo.
               </li>
               <li>
                 Wi-Fi, air conditioning throughout, daily housekeeping, chef
@@ -452,17 +467,17 @@ export default function Home() {
             </div>
             <div className="rates-row">
               <span>Mid Season</span>
-              <span>3 Jan - 31 May 2026</span>
+              <span>3 Jan - 30 Jun 2026</span>
               <strong>KES 75,000</strong>
             </div>
             <div className="rates-row">
               <span>Peak Season</span>
-              <span>1 Jun - 31 Aug 2026</span>
+              <span>1 Jul - 31 Aug 2026</span>
               <strong>KES 87,000</strong>
             </div>
             <div className="rates-row">
               <span>Mid Season</span>
-              <span>1 Sep - 15 Dec 2026</span>
+              <span>1 Sep - 14 Dec 2026</span>
               <strong>KES 75,000</strong>
             </div>
             <div className="rates-row">
@@ -496,8 +511,8 @@ export default function Home() {
               <span>Payment</span>
               <h3>Deposit and balance</h3>
               <p>
-                50% is due within 7 days of confirmation. The balance is due at
-                least 2 days before arrival.
+                A 10% deposit is required to hold bookings. Payment timelines
+                and balance details are confirmed with reservations.
               </p>
             </article>
             <article>
@@ -513,21 +528,17 @@ export default function Home() {
               <h3>Safety first</h3>
               <p>
                 Pool use is at guests&apos; own risk. Children must be
-                supervised, glass is not allowed, and diving is not supported.
+                supervised, glass is not allowed around the pool, and diving is
+                not supported.
               </p>
             </article>
             <article>
               <span>House Rules</span>
-              <h3>No pets or indoor smoking</h3>
+              <h3>No pets or pork</h3>
               <p>
-                Pets are not allowed. Smoking is not permitted inside the house,
-                but may be allowed on balconies and terraces.
+                Pets are not allowed, and pork is not permitted on the villa
+                premises.
               </p>
-            </article>
-            <article>
-              <span>Premises</span>
-              <h3>No alcohol or pork</h3>
-              <p>Alcohol and pork are prohibited on the villa premises.</p>
             </article>
           </div>
         </section>
@@ -537,9 +548,9 @@ export default function Home() {
             <p className="eyebrow dark">Rates / Bookings</p>
             <h2>Your Bofa escape starts with a simple enquiry.</h2>
             <p>
-              Share your dates and group size. The team will confirm
-              availability, the seasonal rate, and any arrangements for meals,
-              occasions, or retreats.
+              Share your dates, villa preference, and group size. The team will
+              confirm availability, the seasonal rate, and any arrangements for
+              meals, occasions, or retreats.
             </p>
 
             <div className="contact-block">
@@ -549,8 +560,19 @@ export default function Home() {
               <a href="mailto:thedestinationbofa@gmail.com">
                 thedestinationbofa@gmail.com
               </a>
-              <a href="https://www.instagram.com/thedestinationkilifi/">
-                @thedestinationkilifi
+              <a
+                href="https://www.instagram.com/thedestinationkilifi/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                IG Handle: @thedestinationkilifi
+              </a>
+              <a
+                href="https://maps.app.goo.gl/uS7Xbq8jpewA6VT26"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Location: The Destination@Bofa, Kilifi
               </a>
             </div>
           </div>
@@ -567,16 +589,29 @@ export default function Home() {
               />
             </label>
 
-            <label>
-              Email
-              <input
-                type="email"
-                name="email"
-                autoComplete="email"
-                placeholder="you@example.com"
-                required
-              />
-            </label>
+            <div className="form-row">
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  autoComplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+
+              <label>
+                Phone Number
+                <input
+                  type="tel"
+                  name="phone"
+                  autoComplete="tel"
+                  placeholder="+254..."
+                  required
+                />
+              </label>
+            </div>
 
             <div className="form-row">
               <label>
@@ -590,22 +625,34 @@ export default function Home() {
             </div>
 
             <label>
-              Guests
-              <select name="guests" required>
-                <option value="">Select guests</option>
-                <option>2 guests</option>
-                <option>4 guests</option>
-                <option>6 guests</option>
-                <option>8 guests</option>
+              Villa Selection
+              <select name="villa" required>
+                <option value="">Select villa</option>
+                <option>Villa Amani</option>
+                <option>Villa Raha</option>
+                <option>Either villa</option>
+                <option>Both villas</option>
               </select>
             </label>
+
+            <div className="form-row">
+              <label>
+                Adults
+                <input type="number" name="adults" min="1" max="16" required />
+              </label>
+
+              <label>
+                Children
+                <input type="number" name="children" min="0" max="16" required />
+              </label>
+            </div>
 
             <label>
               Message
               <textarea
                 name="message"
                 rows={4}
-                placeholder="Share any arrival notes or questions."
+                placeholder="Share any arrival notes, meal requests, event needs, or questions."
               ></textarea>
             </label>
 
@@ -623,7 +670,7 @@ export default function Home() {
       <footer className="site-footer">
         <div>
           <Link className="brand footer-brand" href="/">
-            <img src="/bofa/logo.jpeg" alt="The Destination at Bofa logo" />
+            <img src="/bofa/logo.jpeg" alt="The Destination@Bofa logo" />
           </Link>
           <p>Twin Kilifi luxury beachfront villas near Bofa Beach.</p>
         </div>
@@ -637,7 +684,7 @@ export default function Home() {
           <a href="#booking">Bookings</a>
         </nav>
 
-        <p className="copyright">© 2026 The Destination at Bofa</p>
+        <p className="copyright">© 2026 The Destination@Bofa</p>
       </footer>
 
       {activeImage && (

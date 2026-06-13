@@ -6,22 +6,26 @@ const stats = [
   {
     value: 4,
     suffix: "",
+    prefix: "",
     label: "bedrooms per villa",
   },
   {
     value: 8,
     suffix: "",
+    prefix: "",
     label: "guests per villa",
   },
   {
     value: 2,
     suffix: "",
+    prefix: "",
     label: "private pools",
   },
   {
     value: 0,
-    suffix: "m",
-    label: "to the beach",
+    suffix: "",
+    prefix: "Zero",
+    label: "steps to the beach",
   },
 ];
 
@@ -84,7 +88,7 @@ export default function CountUpStats() {
         {stats.map((stat, index) => (
           <div className="stat-card" key={stat.label}>
             <strong className="stat-number">
-              {values[index]}
+              {stat.prefix || values[index]}
               {stat.suffix}
             </strong>
             <span className="stat-label">{stat.label}</span>

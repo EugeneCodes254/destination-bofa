@@ -10,62 +10,188 @@ type Message = {
 const knowledgeBase = [
   {
     label: "Rates",
-    keywords: ["rate", "rates", "price", "prices", "cost", "fee", "season", "night"],
+    keywords: [
+      "rate",
+      "rates",
+      "price",
+      "prices",
+      "cost",
+      "fee",
+      "season",
+      "night",
+      "mid",
+      "peak",
+      "festive",
+      "june",
+      "july",
+      "december",
+    ],
     response:
-      "2026 accommodation rates are per villa, per night: Mid Season is KES 75,000 from 3 Jan to 31 May; Peak Season is KES 87,000 from 1 Jun to 31 Aug; Mid Season is KES 75,000 from 1 Sep to 15 Dec; Festive Season is KES 105,000 from 15 Dec to 3 Jan. Rates cover accommodation only.",
+      "2026 accommodation rates are per villa, per night: Mid Season is KES 75,000 from 3 Jan to 30 Jun; Peak Season is KES 87,000 from 1 Jul to 31 Aug; Mid Season is KES 75,000 from 1 Sep to 14 Dec; Festive Season is KES 105,000 from 15 Dec to 3 Jan. Rates cover accommodation only.",
   },
   {
     label: "Villa Capacity",
-    keywords: ["capacity", "guests", "people", "bedroom", "bedrooms", "sleep", "occupancy"],
+    keywords: [
+      "capacity",
+      "guests",
+      "people",
+      "bedroom",
+      "bedrooms",
+      "sleep",
+      "occupancy",
+      "adults",
+      "children",
+      "kids",
+    ],
     response:
-      "Each villa hosts up to 8 guests. Each villa has four bedrooms: three ensuite rooms and one twin room with a private bathroom.",
+      "Each villa hosts up to 8 guests. Each villa has four bedrooms: three ensuite rooms and one twin room with a private bathroom. The enquiry form allows you to share the number of adults and children so the reservations team can advise correctly.",
   },
   {
     label: "Villa Amani vs Villa Raha",
-    keywords: ["amani", "raha", "difference", "different", "which villa", "decor", "interior"],
+    keywords: [
+      "amani",
+      "raha",
+      "difference",
+      "different",
+      "which villa",
+      "decor",
+      "interior",
+      "style",
+      "villa selection",
+      "choose",
+    ],
     response:
       "Villa Amani and Villa Raha are twin beachfront villas with similar layouts, but their interior decor and atmosphere differ. Guests are encouraged to preview both villa videos before booking so they choose the villa style they prefer.",
   },
   {
     label: "Property Layout",
-    keywords: ["property", "layout", "tour", "compound", "whole property", "beachfront", "beach"],
+    keywords: [
+      "property",
+      "layout",
+      "tour",
+      "compound",
+      "whole property",
+      "beachfront",
+      "beach",
+      "pool",
+      "garden",
+      "gazebo",
+    ],
     response:
-      "The property has twin beachfront villas set directly by the beach, with private pools, garden spaces, open indoor-outdoor living, and direct access to the calm Bofa coastal setting.",
+      "The Destination@Bofa has twin beachfront villas set directly by the beach, with private pools, garden spaces, furnished poolside gazebo spaces, open indoor-outdoor living, and direct access to the calm Bofa coastal setting.",
   },
   {
     label: "Comfort & Services",
-    keywords: ["chef", "housekeeping", "cleaning", "security", "wifi", "air conditioning", "amenities", "service"],
+    keywords: [
+      "chef",
+      "housekeeping",
+      "cleaning",
+      "security",
+      "wifi",
+      "wi-fi",
+      "air conditioning",
+      "amenities",
+      "service",
+      "generator",
+      "backup",
+      "power",
+      "water",
+      "fresh water",
+      "non-seawater",
+      "non seawater",
+    ],
     response:
-      "The stay includes daily housekeeping, private chef service, Wi-Fi, air conditioning throughout, 24/7 security, bathroom amenities, towels, onsite parking, and support for arranged experiences.",
+      "The stay includes daily housekeeping, private chef service, Wi-Fi, air conditioning throughout, 24/7 security, bathroom amenities, towels, onsite parking, backup generator support, and fresh water supply.",
   },
   {
     label: "Events & Retreats",
-    keywords: ["event", "events", "birthday", "wedding", "retreat", "corporate", "anniversary", "picnic"],
+    keywords: [
+      "event",
+      "events",
+      "birthday",
+      "wedding",
+      "retreat",
+      "corporate",
+      "anniversary",
+      "picnic",
+      "wellness",
+      "gathering",
+    ],
     response:
       "The villas can support private gatherings such as picnics, birthdays, anniversaries, weddings, corporate retreats, and wellness escapes. The team can discuss arrangements depending on your group size and needs.",
   },
   {
     label: "Booking",
-    keywords: ["book", "booking", "reserve", "availability", "available", "enquiry", "contact"],
+    keywords: [
+      "book",
+      "booking",
+      "reserve",
+      "reservation",
+      "availability",
+      "available",
+      "enquiry",
+      "contact",
+      "phone",
+      "call",
+      "whatsapp",
+    ],
     response:
-      "To enquire or reserve, share your preferred dates, number of guests, and any special arrangements. You can use the booking form or contact reservations on +254 736 786 014 or +254 733 786 862.",
+      "To enquire or reserve, share your preferred dates, villa selection, number of adults and children, and any special arrangements. You can use the booking form or contact reservations on +254 736 786 014 or +254 733 786 862.",
   },
   {
     label: "Guest Terms",
-    keywords: ["check in", "checkout", "check-in", "check out", "deposit", "payment", "rules", "alcohol", "pork", "pets", "smoking", "pool"],
+    keywords: [
+      "check in",
+      "checkout",
+      "check-in",
+      "check out",
+      "deposit",
+      "payment",
+      "rules",
+      "pork",
+      "pets",
+      "pet",
+      "pool",
+      "terms",
+      "house rules",
+    ],
     response:
-      "Check-in is from 2:00 PM to 9:00 PM and checkout is at 10:00 AM. A 50% deposit is due within 7 days of confirmation, with the balance due at least 2 days before arrival. Pets are not allowed, indoor smoking is not permitted, and alcohol and pork are prohibited on the premises.",
+      "Check-in is from 2:00 PM to 9:00 PM and checkout is at 10:00 AM. A 10% deposit is required to hold bookings. Each villa is for listed guests only, with a maximum occupancy of 8 people. Pets are not allowed, and pork is not permitted on the villa premises.",
   },
   {
     label: "Location",
-    keywords: ["location", "where", "kilifi", "bofa", "creek", "near"],
+    keywords: [
+      "location",
+      "where",
+      "kilifi",
+      "bofa",
+      "creek",
+      "near",
+      "map",
+      "maps",
+      "directions",
+      "google maps",
+    ],
     response:
-      "The Destination at Bofa is located in Kilifi/Bofa, near Bofa Beach and Kilifi Creek, offering a quiet beachfront villa experience on the Kenyan coast.",
+      "The Destination@Bofa is located in Kilifi/Bofa, near Bofa Beach and Kilifi Creek. You can view the location here: https://maps.app.goo.gl/uS7Xbq8jpewA6VT26",
+  },
+  {
+    label: "Instagram",
+    keywords: [
+      "instagram",
+      "ig",
+      "handle",
+      "social",
+      "page",
+      "account",
+    ],
+    response:
+      "The Instagram handle is IG Handle: @thedestinationkilifi.",
   },
 ];
 
 const defaultBotMessage =
-  "Hi, I can help with rates, villa capacity, the difference between Villa Amani and Villa Raha, booking, services, guest terms, and location.";
+  "Hi, I can help with rates, villa capacity, Villa Amani vs Villa Raha, booking, services, guest terms, location, and the IG handle.";
 
 export default function BofaChatbot() {
   const [open, setOpen] = useState(false);
@@ -87,6 +213,8 @@ export default function BofaChatbot() {
       "Services",
       "Booking",
       "Guest Terms",
+      "Location",
+      "IG Handle",
     ],
     []
   );
@@ -109,7 +237,7 @@ export default function BofaChatbot() {
 
     if (match) return match.response;
 
-    return "I can help with rates, booking, villa capacity, Villa Amani vs Villa Raha, services, guest terms, and location. For anything specific, WhatsApp the reservations team for the fastest confirmation.";
+    return "I can help with rates, booking, villa capacity, Villa Amani vs Villa Raha, services, guest terms, location, and the IG handle. For anything specific, WhatsApp the reservations team for the fastest confirmation.";
   }
 
   function askQuestion(question: string) {
@@ -137,7 +265,7 @@ export default function BofaChatbot() {
           <div className="bofa-chatbot-header">
             <div>
               <span>Villa Assistant</span>
-              <strong>The Destination at Bofa</strong>
+              <strong>The Destination@Bofa</strong>
             </div>
 
             <button
@@ -164,7 +292,11 @@ export default function BofaChatbot() {
 
             <div className="bofa-chatbot-options">
               {quickReplies.map((item) => (
-                <button key={item} type="button" onClick={() => askQuestion(item)}>
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => askQuestion(item)}
+                >
                   {item}
                 </button>
               ))}
@@ -183,7 +315,7 @@ export default function BofaChatbot() {
 
           <a
             className="bofa-chatbot-cta"
-            href="https://wa.me/254736786014?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20The%20Destination%20at%20Bofa."
+            href="https://wa.me/254736786014?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20The%20Destination%40Bofa."
             target="_blank"
             rel="noreferrer"
           >
