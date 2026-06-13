@@ -175,9 +175,9 @@ export default function Home() {
             <p className="hero-eyebrow">Luxury Beach Villas Kilifi</p>
 
             <h1>
-              The Destination
+              The
               <br />
-              at Bofa
+              Destination@Bofa
             </h1>
 
             <p>
