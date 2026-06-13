@@ -377,8 +377,8 @@ export default function Home() {
             </article>
 
             <article>
-              <span>Backup Power</span>
-              <h3>Generator support</h3>
+              <span>Backup Generator</span>
+              <h3>Power support when needed</h3>
               <p>
                 A backup generator is available to support a smoother stay when
                 power interruptions occur.
@@ -541,6 +541,44 @@ export default function Home() {
               </p>
             </article>
           </div>
+        </section>
+
+        <section className="location section-pad" id="location">
+          <div className="location-heading">
+            <div>
+              <p className="section-kicker">Location</p>
+              <h2>Find us on the Bofa beachfront.</h2>
+            </div>
+
+            <p>
+              Set along the calm Bofa coastline in Kilifi, The
+              Destination@Bofa places guests close to Bofa Beach, Kilifi Creek,
+              and the quiet coastal rhythm that makes this part of the Kenyan
+              coast so loved.
+            </p>
+          </div>
+
+          <div className="location-map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.804534215562!2d39.89183080000001!3d-3.5843696000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x183fdd2d3b1dd22d%3A0x9c40594e18915d89!2sThe%20Destination%40Bofa%20Kilifi!5e1!3m2!1sen!2ske!4v1781363030631!5m2!1sen!2ske"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="The Destination@Bofa Kilifi location map"
+            ></iframe>
+          </div>
+
+          <a
+            className="location-link"
+            href="https://maps.app.goo.gl/uS7Xbq8jpewA6VT26"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open in Google Maps
+          </a>
         </section>
 
         <section className="booking section-pad" id="booking">
