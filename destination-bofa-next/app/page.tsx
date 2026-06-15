@@ -174,11 +174,7 @@ export default function Home() {
           <div className="hero-content">
             <p className="hero-eyebrow">Luxury Beach Villas Kilifi</p>
 
-            <h1>
-              The
-              <br />
-              Destination@Bofa
-            </h1>
+            <h1>The Destination@Bofa</h1>
 
             <p>
               Twin beachfront villas shaped around ocean mornings, poolside
@@ -447,47 +443,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="rates section-pad screen-fit" id="rates">
-          <div className="section-kicker">2026 Rates</div>
-
-          <div className="rates-heading">
-            <h2>Accommodation rates per villa, per night.</h2>
-            <p>
-              Rates cover accommodation only. Meals, groceries, drinks, and
-              laundry services are not provided. Rates may change without prior
-              notice.
-            </p>
-          </div>
-
-          <div className="rates-table">
-            <div className="rates-row rates-head">
-              <span>Season</span>
-              <span>Dates</span>
-              <span>Rate</span>
-            </div>
-            <div className="rates-row">
-              <span>Mid Season</span>
-              <span>3 Jan - 30 Jun 2026</span>
-              <strong>KES 75,000</strong>
-            </div>
-            <div className="rates-row">
-              <span>Peak Season</span>
-              <span>1 Jul - 31 Aug 2026</span>
-              <strong>KES 87,000</strong>
-            </div>
-            <div className="rates-row">
-              <span>Mid Season</span>
-              <span>1 Sep - 14 Dec 2026</span>
-              <strong>KES 75,000</strong>
-            </div>
-            <div className="rates-row">
-              <span>Festive Season</span>
-              <span>15 Dec 2026 - 3 Jan 2027</span>
-              <strong>KES 105,000</strong>
-            </div>
-          </div>
-        </section>
-
         <section className="terms section-pad compact-section">
           <div className="section-kicker">Guest Terms</div>
 
@@ -579,6 +534,47 @@ export default function Home() {
           >
             Open in Google Maps
           </a>
+        </section>
+
+        <section className="rates section-pad screen-fit" id="rates">
+          <div className="section-kicker">2026 Rates</div>
+
+          <div className="rates-heading">
+            <h2>Accommodation rates per villa, per night.</h2>
+            <p>
+              Rates cover accommodation only. Meals, groceries, drinks, and
+              laundry services are not provided. Rates may change without prior
+              notice.
+            </p>
+          </div>
+
+          <div className="rates-table">
+            <div className="rates-row rates-head">
+              <span>Season</span>
+              <span>Dates</span>
+              <span>Rate</span>
+            </div>
+            <div className="rates-row">
+              <span>Mid Season</span>
+              <span>3 Jan - 30 Jun 2026</span>
+              <strong>KES 75,000</strong>
+            </div>
+            <div className="rates-row">
+              <span>Peak Season</span>
+              <span>1 Jul - 31 Aug 2026</span>
+              <strong>KES 87,000</strong>
+            </div>
+            <div className="rates-row">
+              <span>Mid Season</span>
+              <span>1 Sep - 14 Dec 2026</span>
+              <strong>KES 75,000</strong>
+            </div>
+            <div className="rates-row">
+              <span>Festive Season</span>
+              <span>15 Dec 2026 - 3 Jan 2027</span>
+              <strong>KES 105,000</strong>
+            </div>
+          </div>
         </section>
 
         <section className="booking section-pad" id="booking">
