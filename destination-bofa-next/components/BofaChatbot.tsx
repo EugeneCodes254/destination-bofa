@@ -9,27 +9,6 @@ type Message = {
 
 const knowledgeBase = [
   {
-    label: "Rates",
-    keywords: [
-      "rate",
-      "rates",
-      "price",
-      "prices",
-      "cost",
-      "fee",
-      "season",
-      "night",
-      "mid",
-      "peak",
-      "festive",
-      "june",
-      "july",
-      "december",
-    ],
-    response:
-      "2026 accommodation rates are per villa, per night: Mid Season is KES 75,000 from 3 Jan to 30 Jun; Peak Season is KES 87,000 from 1 Jul to 31 Aug; Mid Season is KES 75,000 from 1 Sep to 14 Dec; Festive Season is KES 105,000 from 15 Dec to 3 Jan. Rates cover accommodation only.",
-  },
-  {
     label: "Villa Capacity",
     keywords: [
       "capacity",
