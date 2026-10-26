@@ -109,7 +109,7 @@ export default function Home() {
         }`}
       >
         <Link className="brand" href="/" aria-label="The Destination@Bofa">
-          <img src="/bofa/logo.jpeg" alt="The Destination@Bofa logo" />
+          <img src="/bofa/logo.png" alt="The Destination@Bofa logo" />
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -663,7 +663,7 @@ export default function Home() {
       <footer className="site-footer">
         <div>
           <Link className="brand footer-brand" href="/">
-            <img src="/bofa/logo.jpeg" alt="The Destination@Bofa logo" />
+            <img src="/bofa/logo.png" alt="The Destination@Bofa logo" />
           </Link>
           <p>Twin Kilifi luxury beachfront villas near Bofa Beach.</p>
         </div>
